@@ -1,0 +1,153 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --light-color: #ecf0f1;
+    --danger-color: #e74c3c;
+    --success-color: #2ecc71;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: white;
+    height: calc(100vh - 56px);
+    float: left;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    padding: 12px 20px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.sidebar-menu li:hover, .sidebar-menu li.active {
+    background-color: var(--light-color);
+    color: var(--secondary-color);
+}
+
+.sidebar-menu li i {
+    margin-right: 10px;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.btn {
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.table th {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-active {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}

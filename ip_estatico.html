@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro IP Estático - Gerenciador de IPs</title>
+    <link rel="stylesheet" href="styles/ip_estatico.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Gerenciador de IPs</div>
+        <div class="user-info">
+            <span>Admin</span>
+            <img src="https://via.placeholder.com/30" alt="User">
+        </div>
+    </div>
+    
+    <div class="sidebar">
+        <ul class="sidebar-menu">
+            <li><i>📊</i> Dashboard</li>
+            <li><i>🔌</i> Redes e Sub-redes</li>
+            <li class="active"><i>📌</i> IPs Estáticos</li>
+            <li><i>🔄</i> IPs Dinâmicos</li>
+            <li><i>⚠️</i> Conflitos</li>
+            <li><i>📄</i> Relatórios</li>
+            <li><i>⚙️</i> Configurações</li>
+        </ul>
+    </div>
+    
+    <div class="main-content">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Cadastrar IP Estático</div>
+            </div>
+            
+            <div class="ip-preview">
+                <h4>Rede: 192.168.1.0/24</h4>
+                <p><strong>IP disponível:</strong> 192.168.1.105</p>
+                <p><strong>Gateway:</strong> 192.168.1.1</p>
+                <p><strong>Máscara:</strong> 255.255.255.0</p>
+            </div>
+            
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ip">Endereço IP</label>
+                        <input type="text" id="ip" value="192.168.1.105" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="mac">Endereço MAC</label>
+                        <input type="text" id="mac" placeholder="00:1A:2B:3C:4D:5E" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="device">Nome do Dispositivo</label>
+                        <input type="text" id="device" placeholder="Ex: Servidor Web" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="department">Departamento</label>
+                        <select id="department" required>
+                            <option value="">Selecione...</option>
+                            <option value="ti">TI</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="financeiro">Financeiro</option>
+                            <option value="rh">RH</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="responsible">Responsável</label>
+                    <input type="text" id="responsible" placeholder="Nome do responsável" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes">Observações</label>
+                    <input type="text" id="notes" placeholder="Informações adicionais">
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Salvar Reserva</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

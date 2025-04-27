@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Gerenciador de IPs</title>
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Gerenciador de IPs</div>
+        <div class="user-info">
+            <span>Admin</span>
+            <img src="https://via.placeholder.com/30" alt="User">
+        </div>
+    </div>
+    
+    <div class="sidebar">
+        <ul class="sidebar-menu">
+            <li class="active"><i>📊</i> Dashboard</li>
+            <li><i>🔌</i> Redes e Sub-redes</li>
+            <li><i>📌</i> IPs Estáticos</li>
+            <li><i>🔄</i> IPs Dinâmicos</li>
+            <li><i>⚠️</i> Conflitos</li>
+            <li><i>📄</i> Relatórios</li>
+            <li><i>⚙️</i> Configurações</li>
+        </ul>
+    </div>
+    
+    <div class="main-content">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Visão Geral das Redes</div>
+                <button class="btn btn-primary">Adicionar Rede</button>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Rede</th>
+                        <th>Descrição</th>
+                        <th>IPs Disponíveis</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>192.168.1.0/24</td>
+                        <td>Rede Principal</td>
+                        <td>15/254</td>
+                        <td><span class="status-badge status-warning">Capacidade crítica</span></td>
+                        <td>
+                            <button class="btn btn-primary">Detalhes</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10.0.0.0/24</td>
+                        <td>Servidores</td>
+                        <td>50/254</td>
+                        <td><span class="status-badge status-active">Normal</span></td>
+                        <td>
+                            <button class="btn btn-primary">Detalhes</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>172.16.1.0/24</td>
+                        <td>VLAN TI</td>
+                        <td>200/254</td>
+                        <td><span class="status-badge status-active">Normal</span></td>
+                        <td>
+                            <button class="btn btn-primary">Detalhes</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Alertas Recentes</div>
+            </div>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 10px 0; border-bottom: 1px solid #eee;">
+                    <strong>Conflito de IP:</strong> 192.168.1.45 detectado em dois dispositivos
+                </li>
+                <li style="padding: 10px 0; border-bottom: 1px solid #eee;">
+                    <strong>Rede com capacidade crítica:</strong> 192.168.1.0/24 com apenas 15 IPs disponíveis
+                </li>
+                <li style="padding: 10px 0;">
+                    <strong>DHCP indisponível:</strong> Servidor DHCP na VLAN TI não respondeu às 10:45
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
