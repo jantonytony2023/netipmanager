@@ -3,23 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciador de IPs - Login</title>
-    <link rel="icon" href="styles/images/logo.png" type="image/x-icon">
-    <!-- Para navegadores modernos (PNG/SVG): -->
-    <link rel="icon" type="image/png" href="styles/images/logo.png">
-    <link rel="stylesheet" href="styles/login.css">
+    <title>Gerenciador de IPs Corporativos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/landingpage.css">
+    <script src="scripts/scripts.js"></script>
 </head>
 <body>
-    <div class="login-container">
-        <div class="logo">Gerenciador de IPs Corporativos</div>
-        <form class="login-form">
-            <input type="text" placeholder="Usuário" required>
-            <input type="password" placeholder="Senha" required>
-            <button type="submit">Acessar</button>
-        </form>
-        <div class="footer-links">
-            <a href="#">Esqueci minha senha</a> | <a href="#">Suporte técnico</a>
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <i class="fas fa-network-wired"></i>
+                <span>NetIP Manager</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Recursos</a>
+                <a href="#testimonials">Depoimentos</a>
+                <a href="#contact">Contato</a>
+                <a href="ip_estatico.html" class="btn btn-outline">Acessar</a>
+            </div>
         </div>
-    </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Controle Completo da Sua Rede Corporativa</h1>
+            <p>Gerencie IPs estáticos, monitore dispositivos e otimize sua infraestrutura de rede com nossa solução intuitiva e poderosa.</p>
+            <div class="cta-buttons">
+                <a href="ip_estatico.html" class="btn btn-primary">Começar Agora</a>
+                <a href="#features" class="btn btn-outline">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+        <div class="section-title">
+            <h2>Recursos Exclusivos</h2>
+            <p>Tudo que você precisa para gerenciar eficientemente os endereços IP da sua empresa</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Cadastro Rápido</h3>
+                <p>Registre novos dispositivos em segundos com nosso formulário otimizado e campos inteligentes.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Visualização Dinâmica</h3>
+                <p>Dashboard interativo que mostra todos os IPs em uso, disponíveis e com conflitos em tempo real.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-sitemap"></i>
+                </div>
+                <h3>Organização por Setores</h3>
+                <p>Agrupe dispositivos por departamentos, filiais ou VLANs para um gerenciamento segmentado.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Design Responsivo</h3>
+                <p>Acesse o sistema de qualquer dispositivo, com experiência otimizada para desktop e mobile.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Segurança Avançada</h3>
+                <p>Controle de acesso por níveis de permissão e registro detalhado de todas as alterações.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-cloud-download-alt"></i>
+                </div>
+                <h3>Relatórios Automáticos</h3>
+                <p>Gere relatórios completos em PDF ou CSV com um clique para auditorias e documentação.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section" style="background: #f1f5ff; border-radius: 10px;">
+        <div class="stats">
+            <div class="stat-item">
+                <h3>+500</h3>
+                <p>Redes Gerenciadas</p>
+            </div>
+            <div class="stat-item">
+                <h3>99.9%</h3>
+                <p>Disponibilidade</p>
+            </div>
+            <div class="stat-item">
+                <h3>24/7</h3>
+                <p>Suporte Especializado</p>
+            </div>
+            <div class="stat-item">
+                <h3>+1k</h3>
+                <p>Usuários Satisfeitos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-title">
+            <h2>O que dizem nossos clientes</h2>
+            <p>Depoimentos de empresas que transformaram seu gerenciamento de rede</p>
+        </div>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <p class="testimonial-content">
+                            "O NetIP Manager revolucionou nosso controle de IPs estáticos. Reduzimos em 90% os conflitos de rede e o tempo de resolução de problemas."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Ana Silva" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Ana Silva</h4>
+                                <p>Gerente de TI - Empresa X</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <p class="testimonial-content">
+                            "Implementamos em todas nossas filiais e agora temos visibilidade completa da rede corporativa. A equipe de TI economiza horas semanais."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Mendes" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Carlos Mendes</h4>
+                                <p>Diretor de Tecnologia - Grupo Y</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <p class="testimonial-content">
+                            "Simplicidade e poder em uma única solução. Migramos de planilhas para o NetIP e nunca mais tivemos problemas com gestão de endereços IP."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Fernanda Oliveira" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Fernanda Oliveira</h4>
+                                <p>Coordenadora de Redes - Empresa Z</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>Pronto para transformar seu gerenciamento de rede?</h2>
+        <p>Experimente gratuitamente por 14 dias sem necessidade de cartão de crédito</p>
+        <div class="cta-buttons" style="margin-top: 2rem;">
+            <a href="ip_estatico.html" class="btn btn-primary">Começar Agora</a>
+            <a href="#contact" class="btn btn-outline">Falar com Vendas</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>NetIP Manager</h3>
+                <p>A solução completa para gerenciamento de endereços IP em redes corporativas.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Produto</h3>
+                <ul class="footer-links">
+                    <li><a href="#features">Recursos</a></li>
+                    <li><a href="#">Preços</a></li>
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">Atualizações</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Suporte</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Documentação</a></li>
+                    <li><a href="#">Guias</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Chat Online</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contato</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> contato@netipmanager.com</li>
+                    <li><i class="fas fa-phone"></i> (11) 1234-5678</li>
+                    <li><i class="fas fa-map-marker-alt"></i> São Paulo, Brasil</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 NetIP Manager. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
-</html>  
+</html>
