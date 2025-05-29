@@ -16,4 +16,29 @@
 
 ## 📁 Estrutura de Pastas
 
+/css → Arquivos de estilos
+/scripts → Lógicas JavaScript da interface
+/html → Páginas HTML do sistema
+
+
+## 🔧 Como usar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/jantonytony2023/netipmanager.git
+   Navegue até a pasta html:
+
+bash
+Copiar
+Editar
+cd netip-manager/html
+Abra o index.html no seu navegador.
+
+✅ Requisitos
+Navegador moderno (Chrome, Firefox, etc.)
+
+(Opcional) Servidor web local como XAMPP, WAMP ou Live Server (VS Code)
+
+👨‍💻 Autor
+Desenvolvido por [José Jantony].
 # netipmanager
