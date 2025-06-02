@@ -151,3 +151,78 @@ body {
     background-color: #f8d7da;
     color: #721c24;
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal .modal-content {
+    background: #fff;
+    padding: 32px 28px 24px 28px;
+    border-radius: 12px;
+    min-width: 320px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    position: relative;
+    animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+    from { transform: translateY(-40px); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
+}
+
+.modal h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 1.3rem;
+    color: #222;
+}
+
+.modal label {
+    display: block;
+    margin-bottom: 10px;
+    color: #444;
+    font-size: 0.98rem;
+}
+
+.modal input, .modal select {
+    width: 100%;
+    padding: 7px 10px;
+    margin-top: 4px;
+    margin-bottom: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #fafafa;
+}
+
+.modal .btn {
+    margin-right: 8px;
+    padding: 7px 18px;
+    border-radius: 5px;
+    border: none;
+    background: #eee;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.modal .btn.btn-primary {
+    background: #007bff;
+    color: #fff;
+}
+
+.modal .btn:hover {
+    background: #ddd;
+}
+
+.modal .btn.btn-primary:hover {
+    background: #0056b3;
+}

@@ -32,12 +32,10 @@ header {
 }
 
 .navbar {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1.2rem 2rem;
 }
 
 .logo {
@@ -57,18 +55,23 @@ header {
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 2rem; /* Espaçamento entre os links */
+    align-items: center; /* Alinha verticalmente */
 }
 
 .nav-links a {
-    color: white;
     text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
+    color: white; /* Alterado para branco */
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
-.nav-links a:hover {
-    color: #d1d9ff;
+.nav-links .btn {
+    margin-left: 1rem;
 }
 
 /* Hero Section */
@@ -189,16 +192,33 @@ header {
 
 /* Testimonials Carousel */
 .testimonials {
-    background: #f1f5ff;
-    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .swiper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    padding: 2rem 0;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
 }
 
 .testimonial-card {
+    margin: 0 auto;
+    text-align: center;
     background: white;
     border-radius: 10px;
     padding: 2rem;
@@ -363,18 +383,3 @@ footer {
     .nav-links {
         gap: 1rem;
     }
-
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn {
-        width: 100%;
-        text-align: center;
-    }
-}

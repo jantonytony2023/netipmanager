@@ -1,13 +1,16 @@
-// Initialize Swiper
+// Inicialização do Swiper para o carrossel de depoimentos
 const swiper = new Swiper('.swiper', {
     loop: true,
-    autoplay: {
-        delay: 5000,
-    },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    slidesPerView: 1,
+    spaceBetween: 30,
 });
 
 // Smooth scrolling for anchor links

@@ -31,7 +31,7 @@
         <div class="card">
             <div class="card-header">
                 <div class="card-title">Visão Geral das Redes</div>
-                <button class="btn btn-primary">Adicionar Rede</button>
+                <button class="btn btn-primary" id="addRedeBtn">Adicionar Rede</button>
             </div>
             <table class="table">
                 <thead>
@@ -43,34 +43,8 @@
                         <th>Ações</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>192.168.1.0/24</td>
-                        <td>Rede Principal</td>
-                        <td>15/254</td>
-                        <td><span class="status-badge status-warning">Capacidade crítica</span></td>
-                        <td>
-                            <button class="btn btn-primary">Detalhes</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>10.0.0.0/24</td>
-                        <td>Servidores</td>
-                        <td>50/254</td>
-                        <td><span class="status-badge status-active">Normal</span></td>
-                        <td>
-                            <button class="btn btn-primary">Detalhes</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>172.16.1.0/24</td>
-                        <td>VLAN TI</td>
-                        <td>200/254</td>
-                        <td><span class="status-badge status-active">Normal</span></td>
-                        <td>
-                            <button class="btn btn-primary">Detalhes</button>
-                        </td>
-                    </tr>
+                <tbody id="redesTableBody">
+                    <!-- Linhas dinâmicas via JS -->
                 </tbody>
             </table>
         </div>
@@ -79,18 +53,33 @@
             <div class="card-header">
                 <div class="card-title">Alertas Recentes</div>
             </div>
-            <ul style="list-style: none; padding: 0;">
-                <li style="padding: 10px 0; border-bottom: 1px solid #eee;">
-                    <strong>Conflito de IP:</strong> 192.168.1.45 detectado em dois dispositivos
-                </li>
-                <li style="padding: 10px 0; border-bottom: 1px solid #eee;">
-                    <strong>Rede com capacidade crítica:</strong> 192.168.1.0/24 com apenas 15 IPs disponíveis
-                </li>
-                <li style="padding: 10px 0;">
-                    <strong>DHCP indisponível:</strong> Servidor DHCP na VLAN TI não respondeu às 10:45
-                </li>
+            <ul id="alertasRecentes" style="list-style: none; padding: 0;">
+                <!-- Alertas dinâmicos via JS se desejar -->
             </ul>
         </div>
     </div>
+
+    <div id="modalRede" class="modal">
+        <div class="modal-content">
+            <h3>Adicionar Rede</h3>
+            <form id="formRede">
+                <label>Rede<br><input name="rede" required></label>
+                <label>Descrição<br><input name="descricao" required></label>
+                <label>IPs Disponíveis<br><input name="ips" type="number" required></label>
+                <label>Status<br>
+                    <select name="status" required>
+                        <option value="Ativa">Ativa</option>
+                        <option value="Inativa">Inativa</option>
+                    </select>
+                </label>
+                <div style="text-align:right;">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <button type="button" id="fecharModal" class="btn">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="../scripts/main.js"></script>
 </body>
 </html>
