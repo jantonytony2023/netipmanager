@@ -1,28 +1,37 @@
 {
-    "redes": [
-        {
-            "id": 1,
-            "rede": "192.168.1.0/24",
-            "descricao": "Rede Principal",
-            "ips": "15/254",
-            "status": "Capacidade crítica",
-            "statusClass": "status-warning"
-        },
-        {
-            "id": 2,
-            "rede": "10.0.0.0/24",
-            "descricao": "Servidores",
-            "ips": "50/254",
-            "status": "Normal",
-            "statusClass": "status-active"
-        },
-        {
-            "id": 3,
-            "rede": "172.16.1.0/24",
-            "descricao": "VLAN TI",
-            "ips": "200/254",
-            "status": "Normal",
-            "statusClass": "status-active"
-        }
-    ]
+  "redes": [
+    {
+      "id": "2",
+      "rede": "10.0.0.0/24",
+      "descricao": "Servidores",
+      "ips": "50/254",
+      "status": "Normal",
+      "statusClass": "status-active"
+    },
+    {
+      "id": "3",
+      "rede": "172.16.1.0/24",
+      "descricao": "VLAN TI",
+      "ips": "200/254",
+      "status": "Normal",
+      "statusClass": "status-active"
+    },
+    {
+      "id": "dab0",
+      "rede": "10.0.0.10",
+      "descricao": "rede nova",
+      "ips": 20,
+      "status": "Ativa",
+      "statusClass": "status-active"
+    }
+  ],
+  "ativos": [
+    {
+      "id": "1",
+      "ip": "192.168.1.10",
+      "mac": "AA:BB:CC:DD:EE:FF",
+      "descricao": "PC Recepção",
+      "redeId": "2"
+    }
+  ]
 }

@@ -11,7 +11,7 @@
         <div class="logo">Gerenciador de IPs</div>
         <div class="user-info">
             <span>Admin</span>
-            <img src="https://via.placeholder.com/30" alt="User">
+            <img src="https://img.icons8.com/ios-filled/50/000000/user.png" alt="User Icon" class="user-icon">
         </div>
     </div>
     
@@ -32,6 +32,7 @@
             <div class="card-header">
                 <div class="card-title">Visão Geral das Redes</div>
                 <button class="btn btn-primary" id="addRedeBtn">Adicionar Rede</button>
+                <button class="btn btn-secondary" id="addAtivoBtn">Adicionar Ativo</button>
             </div>
             <table class="table">
                 <thead>
@@ -75,6 +76,26 @@
                 <div style="text-align:right;">
                     <button type="submit" class="btn btn-primary">Salvar</button>
                     <button type="button" id="fecharModal" class="btn">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="modalAtivo" class="modal">
+        <div class="modal-content">
+            <h3>Adicionar Ativo</h3>
+            <form id="formAtivo">
+                <label>IP<br><input name="ip" required></label>
+                <label>MAC<br><input name="mac" required></label>
+                <label>Descrição<br><input name="descricao" required></label>
+                <label>Rede<br>
+                    <select name="redeId" id="redeIdSelect" required>
+                        <!-- Opções preenchidas via JS -->
+                    </select>
+                </label>
+                <div style="text-align:right;">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <button type="button" id="fecharModalAtivo" class="btn">Cancelar</button>
                 </div>
             </form>
         </div>

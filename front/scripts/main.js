@@ -1,15 +1,27 @@
+import api from './api.js';
 import { redes as redesOriginais } from "./data_redes.js";
 
 let redes = [];
 
 // Carrega redes do localStorage ou do arquivo original
-function carregarRedes() {
-    const salvas = localStorage.getItem("redes");
-    if (salvas) {
-        redes = JSON.parse(salvas);
-    } else {
-        redes = [...redesOriginais];
-    }
+async function carregarRedes() {
+    redes = await api.read('redes'); // <-- Atualiza a variável global
+    const tbody = document.getElementById('redesTableBody');
+    tbody.innerHTML = '';
+    redes.forEach(rede => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+      <td>${rede.rede}</td>
+      <td>${rede.descricao}</td>
+      <td>${rede.ips}</td>
+      <td><span class="${rede.statusClass || ''}">${rede.status}</span></td>
+      <td>
+        <button onclick="editarRede(${rede.id})">Editar</button>
+        <button onclick="removerRede(${rede.id})">Remover</button>
+      </td>
+    `;
+        tbody.appendChild(tr);
+    });
 }
 
 function salvarRedes() {
@@ -54,10 +66,9 @@ function renderAlertas() {
     });
 }
 
-function adicionarRede(novaRede) {
-    redes.push(novaRede);
-    salvarRedes();
-    renderRedes();
+async function adicionarRede(novaRede) {
+    await api.create('redes', novaRede);
+    carregarRedes();
 }
 
 // Função para abrir e fechar o modal
@@ -71,24 +82,35 @@ function setupModalRede() {
     fechar.onclick = () => { modal.style.display = "none"; };
     modal.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
 
-    form.onsubmit = (e) => {
+    form.onsubmit = async (e) => {
         e.preventDefault();
         const data = Object.fromEntries(new FormData(form));
-        adicionarRede({
+        await adicionarRede({
             rede: data.rede,
             descricao: data.descricao,
             ips: Number(data.ips),
             status: data.status,
-            statusClass: data.status === "Ativa" ? "status-ativa" : "status-inativa"
+            statusClass: data.status === "Ativa" ? "status-active" : "status-inativa"
         });
         form.reset();
         modal.style.display = "none";
     };
 }
 
+window.editarRede = function(id) {
+    // Implemente a lógica de edição
+    alert('Editar rede ' + id);
+};
+
+window.removerRede = async function(id) {
+    if (confirm('Deseja remover esta rede?')) {
+        await api.remove(`redes/${id}`);
+        carregarRedes();
+    }
+};
+
 document.addEventListener("DOMContentLoaded", () => {
     carregarRedes();
-    renderRedes();
     renderAlertas();
     setupModalRede();
 });
