@@ -32,15 +32,14 @@
             <div class="card-header">
                 <div class="card-title">Visão Geral das Redes</div>
                 <button class="btn btn-primary" id="addRedeBtn">Adicionar Rede</button>
-                <button class="btn btn-secondary" id="addAtivoBtn">Adicionar Ativo</button>
+                
             </div>
             <table class="table">
                 <thead>
                     <tr>
                         <th>Rede</th>
-                        <th>Descrição</th>
-                        <th>IPs Disponíveis</th>
-                        <th>Status</th>
+                        <th>Localização</th>
+                        <th>Tipo</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -50,27 +49,22 @@
             </table>
         </div>
         
-        <div class="card">
-            <div class="card-header">
-                <div class="card-title">Alertas Recentes</div>
-            </div>
-            <ul id="alertasRecentes" style="list-style: none; padding: 0;">
-                <!-- Alertas dinâmicos via JS se desejar -->
-            </ul>
-        </div>
+        
     </div>
 
     <div id="modalRede" class="modal">
         <div class="modal-content">
             <h3>Adicionar Rede</h3>
             <form id="formRede">
+                <input type="hidden" name="id" id="redeIdInput">
                 <label>Rede<br><input name="rede" required></label>
                 <label>Descrição<br><input name="descricao" required></label>
-                <label>IPs Disponíveis<br><input name="ips" type="number" required></label>
-                <label>Status<br>
-                    <select name="status" required>
-                        <option value="Ativa">Ativa</option>
-                        <option value="Inativa">Inativa</option>
+                <label>Tipo<br>
+                    <select name="tipo" required>
+                        <option value="LAN">LAN</option>
+                        <option value="Wi-Fi">Wi-Fi</option>
+                        <option value="Cabeada">Cabeada</option>
+                        <option value="WAN">WAN</option>
                     </select>
                 </label>
                 <div style="text-align:right;">
@@ -98,6 +92,16 @@
                     <button type="button" id="fecharModalAtivo" class="btn">Cancelar</button>
                 </div>
             </form>
+        </div>
+    </div>
+
+    <div id="modalVisualizarAtivos" class="modal">
+        <div class="modal-content">
+            <h3>Ativos da Rede</h3>
+            <div id="ativosConteudo"></div>
+            <div style="text-align:right;">
+                <button type="button" id="fecharModalVisualizarAtivos" class="btn">Fechar</button>
+            </div>
         </div>
     </div>
 
