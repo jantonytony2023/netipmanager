@@ -1,0 +1,92 @@
+/* Login Page - inspirado no landingpage.css */
+:root {
+    --primary: #4e73df;
+    --primary-dark: #375ab7;
+    --secondary: #2d3e50;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --gray: #6c757d;
+}
+
+body {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: var(--dark);
+}
+
+.login-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    padding: 2.5rem 2rem 2rem 2rem;
+    max-width: 350px;
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.login-container h2 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--secondary);
+}
+
+.login-container input {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: var(--light);
+    transition: border 0.2s;
+}
+
+.login-container input:focus {
+    border: 1.5px solid var(--primary);
+    outline: none;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 0.9rem;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    margin-top: 0.5rem;
+}
+
+.login-container button:hover {
+    background: var(--primary-dark);
+    box-shadow: 0 4px 16px rgba(78,115,223,0.08);
+}
+
+.login-container .error {
+    color: #e74c3c;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 0.98rem;
+}
+
+@media (max-width: 500px) {
+    .login-container {
+        padding: 1.5rem 0.7rem;
+        max-width: 98vw;
+    }
+}
