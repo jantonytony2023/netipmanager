@@ -1,4 +1,4 @@
-const API_URL = 'https://organic-invention-5gq9r5gqwvw4fqpv-3000.app.github.dev';
+const API_URL = 'http://localhost:3001';
 
 async function create(resource, data) {
   const res = await fetch(`${API_URL}/${resource}`, {
